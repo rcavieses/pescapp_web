@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pescapp - Plataforma de Monitoreo de Pesca</title>
+    <style>
+        :root {
+            --dark-green: #1c4634;
+            --light-green: #e6f0ea;
+            --accent-green: #3c8462;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --gray: #dddddd;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--white);
+        }
+        
+        header {
+            background-color: var(--dark-green);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+        
+        .logo {
+            height: 75px;
+            max-width: 180px;
+            object-fit: contain;
+            background-color: var(--white);
+            padding: 8px;
+            border-radius: 5px;
+            margin: 0 10px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--dark-green);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .card {
+            background-color: var(--light-green);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h3 {
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+        
+        .card-content {
+            flex-grow: 1;
+        }
+        
+        .card-footer {
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent-green);
+        }
+        
+        .citation {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--dark-green);
+            margin-top: 2rem;
+        }
+        
+        .citation p {
+            font-style: italic;
+            color: #555;
+        }
+        
+        footer {
+            background-color: var(--dark-green);
+            color: var(--white);
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .logo-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .logo {
+                height: 60px;
+                margin: 0 auto;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .cards-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="assets/UABC_logo.png" alt="Logo UABC" class="logo">
+                <img src="assets/ECOSUR_logo.png" alt="Logo ECOSUR" class="logo">
+                <img src="assets/IIO_logo.jpg" alt="Logo IIO" class="logo">
+                <img src="assets/LEEM_logo.png" alt="Logo LEEM" class="logo">
+            </div>
+            <h1>Pescapp</h1>
+            <p>Plataforma de monitoreo de pesca artesanal</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="section">
+            <h2>Descripción y Objetivo</h2>
+            <p>Pescapp es una plataforma integral desarrollada para el monitoreo eficiente de actividades de pesca artesanal, permitiendo recopilar datos geoespaciales y estadísticos promoviendo la trazabilidad de productos pesquero y la seguridad en el mar de las personas que se dedican a la pesca. El sistema se compone de una aplicación móvil para la recolección de datos en campo y un tablero digital administrativo para su análisis y visualización.</p>
+            <p>El objetivo principal es proporcionar una herramienta tecnológica que facilite el seguimiento de las actividades pesqueras, contribuyendo a la gestión sostenible de los recursos marinos y a la toma de decisiones basadas en datos precisos. Este proyecto es fruto de la colaboración entre la Universidad Autónoma de Baja California (UABC) y el Colegio de la Frontera Sur (ECOSUR).</p>
+        </section>
+        
+        <section class="section">
+            <h2>Componentes del Proyecto</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Aplicación Móvil</h3>
+                        <p>Herramienta de campo para pescadores y técnicos que permite registrar rutas, coordenadas, tiempos y otros datos relevantes durante las actividades de pesca.</p>
+                        <p>Funciona con y sin conexión a internet, sincronizando los datos cuando se restablece la conectividad.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://drive.google.com/file/d/10S66hREbuhx8E48Ytb2-igspq1bAA1EL/view?usp=drive_link" class="btn">Descargar App</a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Dashboard Administrativo</h3>
+                        <p>Plataforma web de análisis desarrollada con Streamlit que permite visualizar rutas de pesca, generar estadísticas y exportar informes.</p>
+                        <p>Incluye diferentes niveles de acceso: administrador, monitor y usuario, permitiendo un control adecuado de la información.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://pescapp-app.streamlit.app/" class="btn">Acceder al Dashboard</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Documentación y Referencias</h2>
+            <div class="citation">
+                <p>Este proyecto ha sido publicado como un recurso abierto para la comunidad científica y pesquera. Para citar datos generados por este trabajo:</p>
+                <p><strong>Referencia:</strong> [Placeholder para referencia a la publicación del dashboard en Zenodo]</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Pescapp - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
